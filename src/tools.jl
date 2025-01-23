@@ -6,21 +6,21 @@ function draw_lines(N, steps)
     end
 end
 
-function draw_vertical_line(i, j1, j2)
+function draw_vertical_line(i, j1, j2; color=default_color)
     plot!([i, i], [j1, j2], color=color, linewidth=linewidth)
 end
 
 
-function draw_box(i::Int, j::Int, name::String; color=color)
+function draw_box(i::Int, j::Int, name::String; color=default_color)
     plot!(rectangle(i - wbox / 2, j - wbox / 2, wbox, wbox), color=color, linewidth=0)
     annotate!(i, j, text(name, :black, :center))
 end
 
-function draw_circle(i::Int, j::Int)
+function draw_circle(i::Int, j::Int; color=default_color)
     scatter!([i], [j], color=color, markersize=9, markershape=:circle, markerstrokewidth=0)
 end
 
-function daw_circle_plus(i, j)
+function draw_circle_plus(i, j; color=default_color)
     scatter!([i], [j], color=color, markersize=19, markershape=:circle, markerstrokewidth=0)
     plot!([i - 0.15, i + 0.15], [j, j], color=:white, linewidth=linewidth)
     plot!([i, i], [j - 0.15, j + 0.15], color=:white, linewidth=linewidth)
@@ -35,7 +35,7 @@ function subscript(text)
     return join([subscripts[c] for c in text])
 end
 
-function draw_cross(i, j)
+function draw_cross(i, j; color=default_color)
     plot!([i - 0.15, i + 0.15], [j - 0.15, j + 0.15], color=color, linewidth=linewidth)
     plot!([i - 0.15, i + 0.15], [j + 0.15, j - 0.15], color=color, linewidth=linewidth)
 end

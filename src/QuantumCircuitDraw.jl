@@ -15,7 +15,7 @@ include("tools.jl")
 
 
 linewidth = 3
-color = "#6fa5ff"
+default_color = "#6fa5ff"
 wbox = 0.7
 
 
