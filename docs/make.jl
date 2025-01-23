@@ -6,7 +6,8 @@ makedocs(
     format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true",),
     sitename = "QuantumCircuitDraw.jl",
     authors  = "Nicolas Loizeau",
-    pages = ["QuantumCircuitDraw Documentation" => "index.md"]
+    pages = ["QuantumCircuitDraw" => "index.md",
+        "Docstrings" => "docstrings.md"]
 )
 
 deploydocs(
