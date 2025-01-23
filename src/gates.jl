@@ -123,3 +123,13 @@ CY(i::Int, control::Int, target::Int) = Controlled(i, control, target, "Y")
 Draws a controlled Z gate at step `i` with `control` and `target` qubits.
 """
 CZ(i::Int, control::Int, target::Int) = Controlled(i, control, target, "Z")
+
+
+X(i::Int, j::Int) = Single(i, j, "X")
+Y(i::Int, j::Int) = Single(i, j, "Y")
+Z(i::Int, j::Int) = Single(i, j, "Z")
+H(i::Int, j::Int) = Single(i, j, "H")
+S(i::Int, j::Int) = Single(i, j, "S")
+T(i::Int, j::Int) = Single(i, j, "T")
+Tdg(i::Int, j::Int) = Single(i, j, "T†")
+Phase(i::Int, j::Int, theta::Real) = Single(i, j, "P(θ)")
