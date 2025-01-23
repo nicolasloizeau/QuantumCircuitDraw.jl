@@ -15,7 +15,7 @@ using QuantumCircuitDraw
 
 N = 5 # number of qubits
 steps = 8 # number of steps in the circuit
-circuit_plot(N, steps; grid=false) #initialize the plot
+new_circuit_plot(N, steps; grid=false) #initialize the plot
 
 Single(1, 3, "U")
 Single(3, 1, "X")
@@ -34,7 +34,7 @@ Measurement(8, 2)
 
 
 ```@docs
-circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false)
+new_circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false, dpi=300)
 ```
 
 

@@ -30,7 +30,7 @@ end
 
 
 """
-    circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false)
+    new_circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false, dpi=300)
 
 Initializes a plot for a quantum circuit with `N` qubits and `steps` steps.
 If `qubit_names` is empty, the qubits are named `q₁`, `q₂`, etc.
@@ -65,6 +65,11 @@ function circuit_plot(N::Int, circuit; qubit_names=[], grid=false, dpi=300)
     end
 end
 
+"""
+    paulistrings_plot(circuit; qubit_names=[], grid=false, dpi=300)
+
+Plots a circuit constructed with PauliStrings.jl
+"""
 function paulistrings_plot(circuit; qubit_names=[], grid=false, dpi=300)
     c = []
     for (gate, sites) in circuit.gates
