@@ -5,7 +5,7 @@ Plots.reset_defaults()
 
 
 
-# QCPlots Documentation
+# QuantumCircuitDraw Documentation
 
 ## Example
 
