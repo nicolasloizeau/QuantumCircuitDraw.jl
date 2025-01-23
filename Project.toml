@@ -1,0 +1,13 @@
+name = "QuantumCircuitDraw"
+uuid = "9bc3fc32-c1cb-4aa8-b380-0758771d981f"
+authors = ["Nicolas Loizeau"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.6.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
