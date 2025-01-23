@@ -1,21 +1,21 @@
-# QCPlots
+# QuantumCircuitDraw
 
-[![Build Status](https://github.com/nicolasloizeau/QCPlots.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/nicolasloizeau/QCPlots.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://nicolasloizeau.github.io/QCPlots.jl/dev)
+[![Build Status](https://github.com/nicolasloizeau/QCPlots.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/nicolasloizeau/QuantumCircuitDraw.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://nicolasloizeau.github.io/QuantumCircuitDraw.jl/dev)
 
 
 Plot quantum circuits in Qiskit style.
 
 # Installation
 ```julia
-] add https://github.com/nicolasloizeau/QCPlots.jl.git
+] add https://github.com/nicolasloizeau/QuantumCircuitDraw.jl.git
 ```
 
 # Example
 ```julia
 
 using Plots
-using QCPlots
+using QuantumCircuitDraw
 
 N = 5 # number of qubits
 steps = 8 # number of steps in the circuit

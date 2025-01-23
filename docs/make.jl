@@ -4,13 +4,13 @@ using Documenter, QCPlots
 
 makedocs(
     format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true",),
-    sitename = "QCPlots.jl",
+    sitename = "QuantumCircuitDraw.jl",
     authors  = "Nicolas Loizeau",
-    pages = ["QCPlots Documentation" => "index.md"]
+    pages = ["QuantumCircuitDraw Documentation" => "index.md"]
 )
 
 deploydocs(
-    repo = "github.com/nicolasloizeau/QCPlots.jl.git",
+    repo = "github.com/nicolasloizeau/QuantumCircuitDraw.jl.git",
     devbranch = "main",
     branch = "gh-pages",
 )
