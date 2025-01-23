@@ -1,4 +1,4 @@
-using Documenter, QCPlots
+using Documenter, QuantumCircuitDraw
 
 
 
