@@ -11,7 +11,7 @@ Plots.reset_defaults()
 
 ```@example index
 using Plots
-using QCPlots
+using QuantumCircuitDraw
 
 N = 5 # number of qubits
 steps = 8 # number of steps in the circuit
