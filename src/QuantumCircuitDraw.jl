@@ -9,6 +9,8 @@ export X, Y, Z, H, S, T, Tdg, Phase
 export CX, CY, CZ
 export CCX, CCY, CCZ
 export MCX, MCZ
+export default_color
+export set_default_color
 
 include("gates.jl")
 include("tools.jl")
@@ -18,6 +20,9 @@ linewidth = 3
 default_color = "#6fa5ff"
 wbox = 0.7
 
+function set_default_color(color)
+    global default_color = color
+end
 
 function draw_qubit_names(N; names=[])
     if isempty(names)

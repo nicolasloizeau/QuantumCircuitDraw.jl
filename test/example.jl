@@ -11,7 +11,7 @@ Single(3, 1, "X")
 Controlled(1, 1, 2, "X")
 CY(2, 4, 2)
 CNOT(3, 4, 5)
-QuantumCircuitDraw.default_color = "#ff6f6f"
+set_default_color("#ff6f6f")
 CCNOT(4, 4, 2, 3)
 Swap(5, 1, 5)
 MCX(6, [2, 3, 4], 1; color="#B4EBB4")
