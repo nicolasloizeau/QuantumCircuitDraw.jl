@@ -5,7 +5,9 @@
 ```@docs
 new_circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false, dpi=300)
 ```
-
+```@docs
+circuit_plot(N::Int, circuit; qubit_names=[], grid=false, dpi=300)
+```
 ```@docs
 paulistrings_plot(circuit; qubit_names=[], grid=false, dpi=300)
 ```
