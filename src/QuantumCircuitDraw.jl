@@ -3,7 +3,7 @@ module QuantumCircuitDraw
 
 using Plots
 
-export new_circuit_plot, paulistrings_plot
+export new_circuit_plot, paulistrings_plot, circuit_plot
 export Single, CNOT, CCNOT, Measurement, Swap, Controlled
 export X, Y, Z, H, S, T, Tdg, Phase
 export CX, CY, CZ
@@ -55,7 +55,7 @@ function new_circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false, dpi=30
 end
 
 """
-    circuit_plot(N::Int, circuit; qubit_names=[], grid=false, dpi=300)
+    circuit_plot(N::Int, circuit::Vector{Tuple{String, Vector{Real}}}; qubit_names=[], grid=false, dpi=300)
 
 Plots a circuit of the form `circuit = [(gate, sites), ...]`.
 """
