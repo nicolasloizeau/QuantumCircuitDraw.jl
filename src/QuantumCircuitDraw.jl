@@ -54,8 +54,12 @@ function new_circuit_plot(N::Int, steps::Int; qubit_names=[], grid=false, dpi=30
     plot!(xlim=(-wbox / 2, steps + 1))
 end
 
+"""
+    circuit_plot(N::Int, circuit; qubit_names=[], grid=false, dpi=300)
 
-function circuit_plot(N::Int, circuit; qubit_names=[], grid=false, dpi=300)
+Plots a circuit of the form `circuit = [(gate, sites), ...]`.
+"""
+function circuit_plot(N::Int, circuit::Vector{Tuple{String, Vector{Real}}}; qubit_names=[], grid=false, dpi=300)
     stack = zeros(Int, N)
     c = []
     for (gate, sites) in circuit

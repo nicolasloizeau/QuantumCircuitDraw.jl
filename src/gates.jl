@@ -2,14 +2,14 @@
 
 
 """
-    Single(i::Int, j::Int, name::String)
+    Single(i::Int, j::Int, name::String; color=default_color)
 
 Draws a single-qubit gate at step `i` and qubit `j` with name `name`.
 """
 Single(i::Int, j::Int, name::String; color=default_color) = draw_box(i, j, name; color=color)
 
 """
-    Controlled(i::Int, control::Int, target::Int, name::String)
+    Controlled(i::Int, control::Int, target::Int, name::String; color=default_color)
 
 Draws a controlled gate with `control` qubit and `target` qubit at step `i`.
 """
@@ -20,7 +20,7 @@ function Controlled(i::Int, control::Int, target::Int, name::String; color=defau
 end
 
 """
-    MCZ(i::Int, sites::Vector{Int})
+    MCZ(i::Int, sites::Vector{Int}; color=default_color)
 
 Draws a multi-controlled Z gate acting on `sites` qubits at step `i`.
 """
@@ -32,7 +32,7 @@ function MCZ(i::Int, sites::Vector{Int}; color=default_color)
 end
 
 """
-    MCX(i::Int, controls::Vector{Int}, target::Int)
+    MCX(i::Int, controls::Vector{Int}, target::Int; color=default_color)
 
 Draws a multi-controlled X gate acting on `sites` qubits at step `i`.
 """
@@ -46,7 +46,7 @@ function MCX(i::Int, controls::Vector{Int}, target::Int; color=default_color)
 end
 
 """
-    CNOT(i::Int, control::Int, target::Int)
+    CNOT(i::Int, control::Int, target::Int; color=default_color)
 
 Draws a CNOT gate at step `i` with `control` and `target` qubits.
 """
@@ -57,7 +57,7 @@ function CNOT(i::Int, control::Int, target::Int; color=default_color)
 end
 
 """
-    CCNOT(i::Int, control1::Int, control2::Int, target::Int)
+    CCNOT(i::Int, control1::Int, control2::Int, target::Int; color=default_color)
 
 Draws a CCNOT gate at step `i` with `control1`, `control2`, and `target` qubits.
 """
@@ -70,14 +70,14 @@ function CCNOT(i::Int, control1::Int, control2::Int, target::Int; color=default_
 end
 
 """
-    CCX(i::Int, control1::Int, control2::Int, target::Int)
+    CCX(i::Int, control1::Int, control2::Int, target::Int; color=default_color)
 
 Same as [`CCNOT`](@ref).
 """
 CCX(i::Int, control1::Int, control2::Int, target::Int; color=default_color) = CCNOT(i, control1, control2, target; color=color)
 
 """
-    Swap(i::Int, j1::Int, j2::Int)
+    Swap(i::Int, j1::Int, j2::Int; color=default_color)
 
 Draws a SWAP gate at step `i` between qubits `j1` and `j2`.
 """
@@ -88,7 +88,7 @@ function Swap(i::Int, j1::Int, j2::Int; color=default_color)
 end
 
 """
-    Measurement(i::Int, j::Int)
+    Measurement(i::Int, j::Int; color=default_color)
 
 Draws a measurement gate at step `i` on qubit `j`.
 """
@@ -104,21 +104,21 @@ function Measurement(i::Int, j::Int; color=:black)
 end
 
 """
-    CX(i::Int, control::Int, target::Int)
+    CX(i::Int, control::Int, target::Int; color=default_color)
 
 Draws a controlled X gate at step `i` with `control` and `target` qubits.
 """
 CX(i::Int, control::Int, target::Int; color=default_color) = Controlled(i, control, target, "X"; color=color)
 
 """
-    CY(i::Int, control::Int, target::Int)
+    CY(i::Int, control::Int, target::Int; color=default_color)
 
 Draws a controlled Y gate at step `i` with `control` and `target` qubits.
 """
 CY(i::Int, control::Int, target::Int; color=default_color) = Controlled(i, control, target, "Y"; color=color)
 
 """
-    CZ(i::Int, control::Int, target::Int)
+    CZ(i::Int, control::Int, target::Int; color=default_color)
 
 Draws a controlled Z gate at step `i` with `control` and `target` qubits.
 """
