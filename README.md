@@ -7,8 +7,13 @@
 Plot quantum circuits in Qiskit style.
 
 # Installation
+You can install the package using Julia's package manager
 ```julia
-] add https://github.com/nicolasloizeau/QuantumCircuitDraw.jl.git
+using Pkg; Pkg.add(QuantumCircuitDraw)
+```
+Or
+```julia
+] add QuantumCircuitDraw
 ```
 
 # Example
