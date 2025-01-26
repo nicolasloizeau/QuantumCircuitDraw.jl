@@ -80,7 +80,7 @@ end
 Plots a circuit constructed with PauliStrings.jl
 """
 function paulistrings_plot(circuit; qubit_names=[], grid=false, dpi=300)
-    c = []
+    c = Vector{Tuple{String, Vector{Real}}}()
     for (gate, sites) in circuit.gates
         if gate == "Noise"
             continue
