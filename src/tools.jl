@@ -11,7 +11,7 @@ function draw_vertical_line(i, j1, j2; color=default_color)
 end
 
 
-function draw_box(i::Int, j::Int, name::String; color=default_color)
+function draw_box(i::Int, j::Int, name::Union{String,LaTeXString}; color=default_color)
     plot!(rectangle(i - wbox / 2, j - wbox / 2, wbox, wbox), color=color, linewidth=0)
     annotate!(i, j, text(name, :black, :center))
 end

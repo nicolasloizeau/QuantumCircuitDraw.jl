@@ -1,6 +1,6 @@
 module QuantumCircuitDraw
 
-
+using LaTeXStrings
 using Plots
 
 export new_circuit_plot, paulistrings_plot, circuit_plot
@@ -59,7 +59,7 @@ end
 
 Plots a circuit of the form `circuit = [(gate, sites), ...]`.
 """
-function circuit_plot(N::Int, circuit::Vector{Tuple{String, Vector{Real}}}; qubit_names=[], grid=false, dpi=300)
+function circuit_plot(N::Int, circuit::Vector{Tuple{String,Vector{Real}}}; qubit_names=[], grid=false, dpi=300)
     stack = zeros(Int, N)
     c = []
     for (gate, sites) in circuit
@@ -80,7 +80,7 @@ end
 Plots a circuit constructed with PauliStrings.jl
 """
 function paulistrings_plot(circuit; qubit_names=[], grid=false, dpi=300)
-    c = Vector{Tuple{String, Vector{Real}}}()
+    c = Vector{Tuple{String,Vector{Real}}}()
     for (gate, sites) in circuit.gates
         if gate == "Noise"
             continue

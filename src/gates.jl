@@ -6,14 +6,14 @@
 
 Draws a single-qubit gate at step `i` and qubit `j` with name `name`.
 """
-Single(i::Int, j::Int, name::String; color=default_color) = draw_box(i, j, name; color=color)
+Single(i::Int, j::Int, name::Union{String,LaTeXString}; color=default_color) = draw_box(i, j, name; color=color)
 
 """
     Controlled(i::Int, control::Int, target::Int, name::String; color=default_color)
 
 Draws a controlled gate with `control` qubit and `target` qubit at step `i`.
 """
-function Controlled(i::Int, control::Int, target::Int, name::String; color=default_color)
+function Controlled(i::Int, control::Int, target::Int, name::Union{String,LaTeXString}; color=default_color)
     draw_circle(i, control; color=color)
     draw_vertical_line(i, control, target; color=color)
     draw_box(i, target, name; color=color)
